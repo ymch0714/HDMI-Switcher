@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MONITOR SWITCHER</title>
+	<html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
+	<meta charset="UTF-8">
+	<meta name="google" content="notranslate">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="white">
+	<meta name="apple-mobile-web-app-title" content="Display">
+	<meta http-equiv="Content-Language" content="en">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.15.4/css/all.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">    
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">	
+	<style>
+		h1{
+			font-family: 'Roboto', sans-serif;
+			font-weight:1000;
+		}
+		.content {
+		max-width: 100%;
+		text-align:center;
+		}
+		.navbar{
+			list-style:none;
+			margin:0;
+			padding:0;
+			text-align:center;
+			overflow: hidden;
+			background-color: #3a3a3c;
+			position: relative;
+			top: 0;
+			width: 100%;
+			font-family: 'Roboto', sans-serif;
+			font-weight:1000;
+			z-index: 1;
+		}
+		.navbar li{
+			display:inline-block;
+			text-align: center;
+		}
+		.navbar li a{
+			color: #ffc824;
+		}
+		.navbar a{
+			display:inline-block;
+			padding:20px;
+			text-decoration: none;
+		}
+		.navbar a:hover {
+			background: #ffc824;
+			color: white;
+		}
+		.navbar a:active{
+			background-color:#ffc824;
+			color:white;
+		}
+		.logo-img{
+		position: relative;
+		margin: 10px 15px 15px 10px;
+		}
+		.button-container
+		{
+			align-items: center;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 2px;
+			grid-auto-rows: auto;
+		}
+		.button-container-mobile
+		{
+			align-items: center;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2px;
+			grid-auto-rows: auto;
+		}
+		.box {
+			grid-column-start: 1;
+			grid-column-end: 6;
+			grid-row-start: 1;
+			grid-row-end: auto;
+		}
+		img{
+			max-width: 80%;
+		}
+		.desk{
+			width: 100%;
+ 			height: 100%;
+			position: absolute;
+			top: 0;
+  			left: 0;
+			z-index: 10;
+		}
+		.mobile{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+		}
+		@media screen and (min-width : 1080px){
+			.desk{
+			visibility:visible;
+			}
+			.mobile{
+			visibility:hidden;
+			}
+			button[type="submit"] {
+			background: #ffc824;
+			color: #3a3a3c;
+			font-weight:1000;
+			font-size: 35px;
+			cursor: pointer;
+			width: 100%;
+			height: 100px;
+			overflow: hidden;
+			margin: auto;
+			font-family: 'Roboto', sans-serif;
+			}
+			button[type="submit"]:hover{
+				background-color: #3a3a3c;
+				color: white;
+			}
+		}
+		@media screen and (max-width : 1080px){
+			.desk{
+			visibility:hidden;
+			}
+			.mobile{
+			visibility:visible;
+			}
+			button[type="submit"] {
+			background: #ffc824;
+			color: #3a3a3c;
+			font-weight:1000;
+			font-size: 30px;
+			cursor: pointer;
+			width: 100%;
+			height: 150px;
+			overflow: hidden;
+			font-family: 'Roboto', sans-serif;
+		}
+		}
+	</style>
+
+    <title>VideoTaxi Monitor Matrix</title>
+	<link rel="icon" type="image/x-icon" href="assets/favicon.png">
+</head>
+<body>
+	<div class="desk">
+	<div class="navbar">
+		<div><img class="logo-img" src="assets/logo-placeholder.png" width="300px" height="auto"></div>
+		<li><a href="Main.html">ADMIN</a></li>
+		<li><a href="ROOM1.html">ROOM1</a></li>
+		<li><a href="ROOM2.html">ROOM2</a></li>
+		<li><a href="ROOM3.html">ROOM3</a></li>
+		<li><a href="ROOM4.html">ROOM4</a></li>
+		<li><a href="ROOM5.html">ROOM5</a></li>
+		<li><a href="ROOM6.html">ROOM6</a></li>
+		<li><a href="ROOM7.html">ROOM7</a></li>
+		<li><a href="ROOM8.html">ROOM8</a></li>
+		<li><a href="ROOM9.html">ROOM9</a></li>
+		<li><a href="ROOM10.html">ROOM10</a></li>
+		<li><a href="ROOM11.html">ROOM11</a></li>
+		<li><a href="ROOM12.html">ROOM12</a></li>
+	</div>
+
+	<div class="content">
+	<form method="get" action="source.php">
+		<h1>First Select Source:</h1><br>
+		<div class="button-container">
+			<button  type="submit" name="fsource" value="1">IN1 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="2">IN2 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="3">IN3 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="4">IN4 <i class="fas fa-cogs"></i></button>
+			<button  type="submit" name="fsource" value="5">IN5 <i class="fas fa-cogs"></i></button>
+			<button  type="submit" name="fsource" value="6">IN6 <i class="fas fa-user-secret"></i></button>
+			<button  type="submit" name="fsource" value="7">IN7 <i class="fas fa-compact-disc"></i></button>
+			<button  type="submit" name="fsource" value="8">IN8 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="9">IN9 <i class="fas fa-desktop"></i></i></button>
+			<button  type="submit" name="fsource" value="10">IN10 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="11">IN11 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="12">IN12 <i class="fas fa-cogs"></i></button>
+			<button  type="submit" name="fsource" value="13">IN13 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="14">IN14 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="15">IN15 <i class="fab fa-chromecast"></i></button>
+			<button  type="submit" name="fsource" value="16">TV <i class="fas fa-tv"></i></button>
+		</div>
+	</form>
+
+	<form method="post" action="client.php">
+		<h1>Then Select Display:</h1><br>
+		<div class="button-container">		
+			<button type="submit" name="fdisplay" value="1">OUT1 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="2">OUT2 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="3">OUT3 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="4">OUT4 <i class="fas fa-tv"></i></button>			
+			<button type="submit" name="fdisplay" value="5">OUT5 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="6">OUT6 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="7">OUT7 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="8">OUT8 <i class="fas fa-theater-masks"></i></button>
+			<button type="submit" name="fdisplay" value="9">OUT9 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="10">OUT10 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="11">OUT11 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="12">OUT12 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="13">OUT13 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="14">OUT14 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="15">OUT15 <span class="bi bi-projector-fill"></span></button>
+			<button type="submit" name="fdisplay" value="16">OUT16 <i class="fas fa-utensils"></i></button>
+
+	</form>
+	</div>
+	</div>
+</body>
+
+<body>
+<div class="mobile">
+	<div class="navbar">
+		<div><img class="logo-img" src="assets/logo-placeholder.png" width="300px" height="auto"></div>
+		<li><a href="Main.html">ADMIN</a></li>
+		<li><a href="ROOM1.html">ROOM1</a></li>
+		<li><a href="ROOM2.html">ROOM2</a></li>
+		<li><a href="ROOM3.html">ROOM3</a></li>
+		<li><a href="ROOM4.html">ROOM4</a></li>
+		<li><a href="ROOM5.html">ROOM5</a></li>
+		<li><a href="ROOM6.html">ROOM6</a></li>
+		<li><a href="ROOM7.html">ROOM7</a></li>
+		<li><a href="ROOM8.html">ROOM8</a></li>
+		<li><a href="ROOM9.html">ROOM9</a></li>
+		<li><a href="ROOM10.html">ROOM10</a></li>
+		<li><a href="ROOM11.html">ROOM11</a></li>
+		<li><a href="ROOM12.html">ROOM12</a></li>
+	</div>
+	
+	<div class="content">
+	<form method="get" action="source.php">
+		<h1>First Select Source:</h1><br>
+		<div class="button-container-mobile">
+			<button  type="submit" name="fsource" value="1">IN1 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="2">IN2 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="3">IN3 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="4">IN4 <i class="fas fa-cogs"></i></button>
+			<button  type="submit" name="fsource" value="5">IN5 <i class="fas fa-cogs"></i></button>
+			<button  type="submit" name="fsource" value="6">IN6 <i class="fas fa-user-secret"></i></button>
+			<button  type="submit" name="fsource" value="7">IN7 <i class="fas fa-compact-disc"></i></button>
+			<button  type="submit" name="fsource" value="8">IN8 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="9">IN9 <i class="fas fa-desktop"></i></i></button>
+			<button  type="submit" name="fsource" value="10">IN10 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="11">IN11 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="12">IN12 <i class="fas fa-cogs"></i></button>
+			<button  type="submit" name="fsource" value="13">IN13 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="14">IN14 <i class="fas fa-desktop"></i></button>
+			<button  type="submit" name="fsource" value="15">IN15 <i class="fab fa-chromecast"></i></button>
+			<button  type="submit" name="fsource" value="16">TV <i class="fas fa-tv"></i></button>
+		</div>
+	</form>
+
+	<form method="post" action="client.php">
+		<h1>Then Select Display:</h1><br>
+		<div class="button-container-mobile">
+			<button type="submit" name="fdisplay" value="1">OUT1 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="2">OUT2 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="3">OUT3 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="4">OUT4 <i class="fas fa-tv"></i></button>			
+			<button type="submit" name="fdisplay" value="5">OUT5 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="6">OUT6 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="7">OUT7 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="8">OUT8 <i class="fas fa-theater-masks"></i></button>
+			<button type="submit" name="fdisplay" value="9">OUT9 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="10">OUT10 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="11">OUT11 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="12">OUT12 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="13">OUT13 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="14">OUT14 <i class="fas fa-tv"></i></button>
+			<button type="submit" name="fdisplay" value="15">OUT15 <span class="bi bi-projector-fill"></span></button>
+			<button type="submit" name="fdisplay" value="16">OUT16 <i class="fas fa-utensils"></i></button>
+		</div>
+		<br><br><br>
+
+	</form>
+	</div>
+</div>
+</body>
+
+</html>
